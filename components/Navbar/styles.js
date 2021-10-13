@@ -4,7 +4,8 @@ import { bps } from '../../styles/breakpoints';
 
 export const NavContainer = styled.nav`
    position: sticky;
-   background-color: white;
+   -webkit-backdrop-filter: blur(8px);
+   backdrop-filter: blur(8px);
    top: 0;
    height: 80px;
 `;
@@ -51,6 +52,10 @@ export const Navlink = styled(Link)`
 
    &:hover {
       background: ${props => props.active !== 'false' ? props.theme.lightThird : props.theme.background};
+   }
+
+   &.active {
+      background: ${props => props.theme.lightThird};
    }
 `;
 

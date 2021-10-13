@@ -13,16 +13,8 @@ import {
    NavlinksSection
 } from './styles';
 
-export const Navbar = () => {
+export const Navbar = ({ activeNavlinks, setActiveNavlinks }) => {
 
-   const ACTIVE_NAVLINKS = {
-      hero: 'true',
-      about: 'false',
-      projects: 'false',
-      contact: 'false',
-   };
-
-   const [activeNavlinks, setActiveNavlinks] = useState(ACTIVE_NAVLINKS);
    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
    const handleActiveNavlinks = (props) => {
@@ -85,6 +77,8 @@ export const Navbar = () => {
                            smooth={true}
                            offset={-80}
                            onClick={() => handleActiveNavlinks('hero')}
+                           spy={true}
+                           exact='true'
                         >
                            Home
                         </Navlink>
@@ -94,6 +88,8 @@ export const Navbar = () => {
                            smooth={true}
                            offset={-80}
                            onClick={() => handleActiveNavlinks('about')}
+                           spy={true}
+                           exact='true'
                         >
                            About
                         </Navlink>
@@ -103,6 +99,8 @@ export const Navbar = () => {
                            smooth={true}
                            offset={-80}
                            onClick={() => handleActiveNavlinks('projects')}
+                           spy={true}
+                           exact='true'
                         >
                            Projects
                         </Navlink>
@@ -112,6 +110,8 @@ export const Navbar = () => {
                            smooth={true}
                            offset={-80}
                            onClick={() => handleActiveNavlinks('contact')}
+                           spy={true}
+                           exact='true'
                         >
                            Contact
                         </Navlink>
