@@ -13,6 +13,7 @@ export default function Home() {
             <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
             <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Spartan:wght@700&display=swap" rel="stylesheet" />
          </Head>
+
          <Navbar />
          <Hero />
          <About />

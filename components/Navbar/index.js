@@ -1,6 +1,11 @@
+import { useState } from 'react';
 import {
+   Bars,
+   BarsButton,
    BarsSection,
    LogoSection,
+   MobileMenu,
+   MobileNavLinksList,
    Nav,
    NavContainer,
    Navlink,
@@ -9,6 +14,60 @@ import {
 } from './styles';
 
 export const Navbar = () => {
+
+   const ACTIVE_NAVLINKS = {
+      hero: 'true',
+      about: 'false',
+      projects: 'false',
+      contact: 'false',
+   };
+
+   const [activeNavlinks, setActiveNavlinks] = useState(ACTIVE_NAVLINKS);
+   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+   const handleActiveNavlinks = (props) => {
+      if (window.innerWidth < 880) {
+         setMobileMenuOpen(prev => !prev);
+      }
+      if (props === 'hero') {
+         setActiveNavlinks(prev => ({
+            ...prev,
+            hero: 'true',
+            about: 'false',
+            projects: 'false',
+            contact: 'false',
+         }));
+      } else if (props === 'about') {
+         setActiveNavlinks(prev => ({
+            ...prev,
+            hero: 'false',
+            about: 'true',
+            projects: 'false',
+            contact: 'false',
+         }));
+      } else if (props === 'projects') {
+         setActiveNavlinks(prev => ({
+            ...prev,
+            hero: 'false',
+            about: 'false',
+            projects: 'true',
+            contact: 'false',
+         }));
+      } else if (props === 'contact') {
+         setActiveNavlinks(prev => ({
+            ...prev,
+            hero: 'false',
+            about: 'false',
+            projects: 'false',
+            contact: 'true',
+         }));
+      }
+   };
+
+   const handleMobileMenuOpen = () => {
+      setMobileMenuOpen(prev => !prev);
+   };
+
    return (
       <NavContainer>
          <Nav>
@@ -16,14 +75,88 @@ export const Navbar = () => {
                Logo
             </LogoSection>
             <BarsSection>
-
+               <BarsButton open={mobileMenuOpen.toString()} onClick={handleMobileMenuOpen}>
+                  <Bars open={mobileMenuOpen.toString()}></Bars>
+                  <MobileMenu open={mobileMenuOpen.toString()}>
+                     <MobileNavLinksList>
+                        <Navlink
+                           active={activeNavlinks.hero}
+                           to="hero"
+                           smooth={true}
+                           offset={-80}
+                           onClick={() => handleActiveNavlinks('hero')}
+                        >
+                           Home
+                        </Navlink>
+                        <Navlink
+                           active={activeNavlinks.about}
+                           to="about"
+                           smooth={true}
+                           offset={-80}
+                           onClick={() => handleActiveNavlinks('about')}
+                        >
+                           About
+                        </Navlink>
+                        <Navlink
+                           active={activeNavlinks.projects}
+                           to="projects"
+                           smooth={true}
+                           offset={-80}
+                           onClick={() => handleActiveNavlinks('projects')}
+                        >
+                           Projects
+                        </Navlink>
+                        <Navlink
+                           active={activeNavlinks.contact}
+                           to="contact"
+                           smooth={true}
+                           offset={-80}
+                           onClick={() => handleActiveNavlinks('contact')}
+                        >
+                           Contact
+                        </Navlink>
+                     </MobileNavLinksList>
+                  </MobileMenu>
+               </BarsButton>
             </BarsSection>
             <NavlinksSection>
                <NavlinksList>
-                  <Navlink activeClass="active" to="hero" smooth={true} offset={-80}> Home </Navlink>
-                  <Navlink activeClass="active" to="about" smooth={true} offset={-80}> About </Navlink>
-                  <Navlink activeClass="active" to="projects" smooth={true} offset={-80}> Projects </Navlink>
-                  <Navlink activeClass="active" to="contact" smooth={true} offset={-80}> Contact </Navlink>
+                  <Navlink
+                     active={activeNavlinks.hero}
+                     to="hero"
+                     smooth={true}
+                     offset={-80}
+                     onClick={() => handleActiveNavlinks('hero')}
+                  >
+                     Home
+                  </Navlink>
+                  <Navlink
+                     active={activeNavlinks.about}
+                     to="about"
+                     smooth={true}
+                     offset={-80}
+                     onClick={() => handleActiveNavlinks('about')}
+                  >
+                     About
+                  </Navlink>
+                  <Navlink
+                     active={activeNavlinks.projects}
+                     to="projects"
+                     smooth={true}
+                     offset={-80}
+                     onClick={() => handleActiveNavlinks('projects')}
+                  >
+                     Projects
+                  </Navlink>
+                  <Navlink
+                     active={activeNavlinks.contact}
+                     to="contact"
+                     smooth={true}
+                     offset={-80}
+                     onClick={() => handleActiveNavlinks('contact')}
+                  >
+                     Contact
+                  </Navlink>
                </NavlinksList>
             </NavlinksSection>
          </Nav>
