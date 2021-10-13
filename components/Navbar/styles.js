@@ -45,17 +45,16 @@ export const Navlink = styled(Link)`
    cursor: pointer;
    font-size: 1rem;
    font-family: 'Spartan', sans-serif;
-   background: ${props => props.active === 'true' ? props.theme.third : 'transparent'};
    padding: .5em .65em;
    border-radius: 4px;
    color: ${props => props.theme.primaryText};
 
    &:hover {
-      background: ${props => props.active !== 'false' ? props.theme.lightThird : props.theme.background};
+      background: ${props => props.theme.background};
    }
 
    &.active {
-      background: ${props => props.theme.lightThird};
+      background: ${props => props.theme.third};
    }
 `;
 
@@ -125,7 +124,7 @@ export const Bars = styled.div`
 `;
 
 export const MobileMenu = styled.menu`
-   background: white;
+   background: ${props => props.theme.mobileMenuBackground};
    position: absolute;
    width: 100vw;
    height: 0px;
