@@ -1,11 +1,11 @@
 export const lighTheme = {
    primary: '#000000',
-   secondary: '#2250F4',
+   secondary: '#ffffff',
    third: '#EDEDED',
+   highlight: '#2250F4',
    lightThird: '#f0f0f0',
    background: '#f7f7f7',
-   primaryText: 'black',
-   secondaryText: '#cccccc',
+   altText: '#cccccc',
    mobileMenuBackground: '#ffffff'
 };
 

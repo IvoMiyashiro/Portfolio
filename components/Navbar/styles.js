@@ -4,10 +4,12 @@ import { bps } from '../../styles/breakpoints';
 
 export const NavContainer = styled.nav`
    position: sticky;
-   -webkit-backdrop-filter: blur(8px);
-   backdrop-filter: blur(8px);
+   -webkit-backdrop-filter: blur(5px);
+   backdrop-filter: blur(5px);
    top: 0;
    height: 80px;
+   margin-top: -80px;
+   z-index: 10;
 `;
 
 export const Nav = styled.div`
@@ -44,7 +46,8 @@ export const NavlinksList = styled.ul`
 export const Navlink = styled(Link)`
    cursor: pointer;
    font-size: 1rem;
-   font-family: 'Spartan', sans-serif;
+   font-family: 'Fira Mono', sans-serif;
+   font-weight: 500;
    padding: .5em .65em;
    border-radius: 4px;
    color: ${props => props.theme.primaryText};
@@ -72,6 +75,7 @@ export const BarsButton = styled.div`
       display: none;
 }
 `;
+
 
 const barsAnimation = `
    transform: translateX(-100px);

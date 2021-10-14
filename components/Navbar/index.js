@@ -47,7 +47,6 @@ export const Navbar = () => {
                            smooth={true}
                            offset={-80}
                            spy={true}
-                           speed={500}
                            exact='true'
                         >
                            About
