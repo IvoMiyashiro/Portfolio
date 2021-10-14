@@ -4,26 +4,29 @@ import {
    HeroSection,
    MainTitle,
    Quote,
-   UnderlineWord
+   UnderlineWord,
+   HeroContainer
 } from './styles';
-import { ContentContainer, Headline, HighlightText } from '../../styles/general';
+import { Headline, HighlightText } from '../../styles/general';
 
 export const Hero = () => {
    return (
       <HeroSection id="hero" >
-         <ContentContainer>
+         <HeroContainer>
             <Headline> Hola Mundo! Mi nombre es </Headline>
-            <MainTitle> Ivan Miyashiro. </MainTitle>
-            <MainTitle>
-               Un apasionado&nbsp;
-               <UnderlineWord> Desarrollador Web. <CoolUnderline></CoolUnderline></UnderlineWord>
-            </MainTitle>
+            <div>
+               <MainTitle> Ivan Miyashiro. </MainTitle>
+               <MainTitle>
+                  Un apasionado&nbsp;
+                  <UnderlineWord> Web Dev. <CoolUnderline></CoolUnderline></UnderlineWord>
+               </MainTitle>
+            </div>
             <Quote>
                Hace un año comence mi aventura dentro del mundo del desarrollo web.
-               Actualmente estoy en <HighlightText> busca de oportunidades para ayudar a solucionar problemas de software </HighlightText> y también, adquirir nuevos y mejores conociemientos.
+               Actualmente estoy en <HighlightText> busca de oportunidades para ayudar a solucionar problemas de software </HighlightText>.
             </Quote>
             <Button> Descargar CV </Button>
-         </ContentContainer>
+         </HeroContainer>
       </HeroSection>
    );
 };

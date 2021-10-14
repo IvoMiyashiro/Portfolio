@@ -1,10 +1,11 @@
 import styled from 'styled-components';
+import { bps } from '../../styles/breakpoints';
 import { BsLinkedin } from 'react-icons/bs';
 import { BsGithub } from 'react-icons/bs';
 import { IoMailOpenSharp } from 'react-icons/io5';
 
 const commun = `{
-   font-size: 1.65rem;
+   font-size: 1.25rem;
    transition: .2s ease-in-out;
 
    &:hover {
@@ -14,15 +15,19 @@ const commun = `{
 }`;
 
 export const SocialMediaList = styled.ul`
+   display: none;
    position: fixed;
    bottom: 0;
-   left: 3em;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   gap: 2.5em;
+   left: 2em;
    padding: 0;
    margin: 0;
+
+   ${bps.desktop} {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.75em;
+   }
 `;
 
 export const SocialMediaAnchor = styled.a`
@@ -51,7 +56,7 @@ export const EmailIcon = styled(IoMailOpenSharp)`
 `;
 
 export const Line = styled.div`
-   height: 150px;
+   height: 100px;
    width: 1px;
    background: ${props => props.theme.primary};
 `;

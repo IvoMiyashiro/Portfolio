@@ -2,10 +2,11 @@ import Head from 'next/head';
 import { Contact } from '../components/Contact';
 import { Navbar } from '../components/Navbar';
 import { SocialMediaColumn } from '../components/SocialMediaColumn';
-import { LenguagesColumn } from '../components/LenguagesColumn';
+// import { LenguagesColumn } from '../components/LenguagesColumn';
 import { Hero } from '../components/Hero';
 import { About } from '../components/About';
 import { Projects } from '../components/Projects';
+import { Technologies } from '../components/Technologies';
 
 export default function Home() {
 
@@ -18,11 +19,10 @@ export default function Home() {
          </Head>
 
          <Navbar />
-
          <SocialMediaColumn />
-         <LenguagesColumn />
          <Hero />
          <About />
+         <Technologies />
          <Projects />
          <Contact />
       </>

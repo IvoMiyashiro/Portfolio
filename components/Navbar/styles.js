@@ -2,7 +2,7 @@ import { Link } from 'react-scroll';
 import styled from 'styled-components';
 import { bps } from '../../styles/breakpoints';
 
-export const NavContainer = styled.nav`
+export const NavContainer = styled.header`
    position: sticky;
    -webkit-backdrop-filter: blur(5px);
    backdrop-filter: blur(5px);
@@ -10,9 +10,10 @@ export const NavContainer = styled.nav`
    height: 80px;
    margin-top: -80px;
    z-index: 10;
+   transition: top .2s ease-in-out;
 `;
 
-export const Nav = styled.div`
+export const Nav = styled.nav`
    display: flex;
    align-items: center;
    justify-content: space-between;
@@ -137,6 +138,7 @@ export const MobileMenu = styled.menu`
    right: -32px;
    z-index: 1;
    margin: 0;
+   padding-right: 1.15em;
    display: flex;
    align-items: center;
    justify-content: center;

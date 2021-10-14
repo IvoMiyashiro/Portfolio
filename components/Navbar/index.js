@@ -1,28 +1,48 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { HambuerguerMenu } from './HambuerguerMenu';
+import { NavLinksDesktop } from './NavLinksDesktop';
+
 import {
    Bars,
    BarsButton,
    BarsSection,
    LogoSection,
-   MobileMenu,
-   MobileNavLinksList,
    Nav,
    NavContainer,
-   Navlink,
-   NavlinksList,
    NavlinksSection
 } from './styles';
 
 export const Navbar = () => {
 
    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+   const navbarRef = useRef(null);
 
    const handleMobileMenuOpen = () => {
       setMobileMenuOpen(prev => !prev);
    };
 
+   useEffect(() => {
+
+      let prevPosition = window.pageYOffset;
+      const handleHideNavbar = () => {
+         let currentPosition = window.pageYOffset;
+
+         if (prevPosition > currentPosition) {
+            navbarRef.current.style.top = 0;
+         } else {
+            navbarRef.current.style.top = '-80px';
+         }
+         prevPosition = currentPosition;
+      };
+
+      window.addEventListener('scroll', handleHideNavbar);
+      return () => {
+         window.removeEventListener('scroll', handleHideNavbar);
+      };
+   }, []);
+
    return (
-      <NavContainer>
+      <NavContainer ref={navbarRef}>
          <Nav>
             <LogoSection>
                Logo
@@ -30,92 +50,13 @@ export const Navbar = () => {
             <BarsSection>
                <BarsButton open={mobileMenuOpen.toString()} onClick={handleMobileMenuOpen}>
                   <Bars open={mobileMenuOpen.toString()}></Bars>
-                  <MobileMenu open={mobileMenuOpen.toString()}>
-                     <MobileNavLinksList>
-                        <Navlink
-                           to="hero"
-                           smooth={true}
-                           offset={-80}
-                           spy={true}
-                           speed={500}
-                           exact='true'
-                        >
-                           Home
-                        </Navlink>
-                        <Navlink
-                           to="about"
-                           smooth={true}
-                           offset={-80}
-                           spy={true}
-                           exact='true'
-                        >
-                           About
-                        </Navlink>
-                        <Navlink
-                           to="projects"
-                           smooth={true}
-                           offset={-80}
-                           spy={true}
-                           speed={500}
-                           exact='true'
-                        >
-                           Projects
-                        </Navlink>
-                        <Navlink
-                           to="contact"
-                           smooth={true}
-                           offset={-80}
-                           spy={true}
-                           speed={500}
-                           exact='true'
-                        >
-                           Contact
-                        </Navlink>
-                     </MobileNavLinksList>
-                  </MobileMenu>
+                  <HambuerguerMenu open={mobileMenuOpen.toString()} />
                </BarsButton>
             </BarsSection>
             <NavlinksSection>
-               <NavlinksList>
-                  <Navlink
-                     to="hero"
-                     smooth={true}
-                     offset={-80}
-                     spy={true}
-                     exact='true'
-                  >
-                     Home
-                  </Navlink>
-                  <Navlink
-                     to="about"
-                     smooth={true}
-                     offset={-80}
-                     spy={true}
-                     exact='true'
-                  >
-                     About
-                  </Navlink>
-                  <Navlink
-                     to="projects"
-                     smooth={true}
-                     offset={-80}
-                     spy={true}
-                     exact='true'
-                  >
-                     Projects
-                  </Navlink>
-                  <Navlink
-                     to="contact"
-                     smooth={true}
-                     offset={-80}
-                     spy={true}
-                     exact='true'
-                  >
-                     Contact
-                  </Navlink>
-               </NavlinksList>
+               <NavLinksDesktop />
             </NavlinksSection>
          </Nav>
-      </NavContainer>
+      </NavContainer >
    );
 };
