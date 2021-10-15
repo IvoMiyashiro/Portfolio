@@ -21,7 +21,7 @@ export const Others = () => {
          <DetailsSection>
             <Headline> Otras </Headline>
             <br />
-            <TextInfo> El desarrollo Frontend es uno de mis fuertes, estos son algunas de las tecnologías que manejo: </TextInfo>
+            <TextInfo> Alugnas de estas herramientas las utilizo en mi día a día y otras las he utilizado para proyectos específicos: </TextInfo>
             <TechList>
                <TechItem><CheckIcon/> VS Code </TechItem>
                <TechItem><CheckIcon/> Postman </TechItem>

@@ -10,7 +10,7 @@ export const TechnologiesContainer = styled.section`
    ${bps.desktop} {
       width: 80%;
       max-width: 1000px;
-      padding: 7em 0;
+      padding-top: 7em;
    }
 `;
 
@@ -95,6 +95,11 @@ export const TechItem = styled.li`
    display: flex;
    align-items: center;
    gap: .5em;
+   font-size: .9rem;
+
+   ${bps.desktop} {
+      font-size: 1rem;
+   }
 `;
 
 export const CheckIcon = styled(BsCheckCircle)`
