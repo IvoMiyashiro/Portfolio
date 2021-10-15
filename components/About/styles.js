@@ -19,7 +19,7 @@ export const MainInfoSection = styled.section`
    display: flex;
    flex-direction: column;
    gap: 3em;
-   margin-top: 2em;
+   margin-top: 3.5em;
 
    ${bps.desktop} {
       flex-direction: row;

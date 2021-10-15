@@ -15,9 +15,11 @@ export const HighlightText = styled.span`
 export const SectionTitle = styled.h2`
    font-size: 1.75rem;
    font-family: 'Inter', sans-serif;
+   text-align: center;
    margin: 0;
 
    ${bps.desktop} {
-      font-size: 2.25rem
+      text-align: left;
+      font-size: 2.25rem;
    }
 `;

@@ -5,7 +5,7 @@ import { BsGithub } from 'react-icons/bs';
 import { IoMailOpenSharp } from 'react-icons/io5';
 
 const commun = `{
-   font-size: 1.25rem;
+   font-size: 1.5rem;
    transition: .2s ease-in-out;
 
    &:hover {

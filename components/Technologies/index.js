@@ -1,38 +1,21 @@
+
+import { Frontend } from './Frontend';
+import { Backend } from './Backend';
+import { Others } from './Others';
+
 import { HighlightText, SectionTitle } from '../../styles/general';
-import {
-   DetailsSection,
-   SvgSection,
-   TechContainer,
-   TechnologiesContainer
-} from './styles';
+import { TechCategoriesContainer, TechnologiesContainer } from './styles';
+
 
 export const Technologies = () => {
    return (
       <TechnologiesContainer>
          <SectionTitle> Tecnologías <HighlightText>.</HighlightText> </SectionTitle>
-         <TechContainer>
-            <SvgSection>
-
-            </SvgSection>
-            <DetailsSection>
-
-            </DetailsSection>
-         </TechContainer>
-         <TechContainer>
-            <SvgSection>
-
-            </SvgSection>
-            <DetailsSection>
-
-            </DetailsSection>
-         </TechContainer>
-         <TechContainer>
-            <SvgSection>
-
-            </SvgSection>
-            <DetailsSection>
-            </DetailsSection>
-         </TechContainer>
+         <TechCategoriesContainer>
+            <Frontend />
+            <Backend />
+            <Others />
+         </TechCategoriesContainer>
       </TechnologiesContainer>
    );
 };
