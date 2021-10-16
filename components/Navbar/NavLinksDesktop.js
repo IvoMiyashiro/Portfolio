@@ -6,7 +6,6 @@ export const NavLinksDesktop = () => {
          <Navlink
             to="hero"
             smooth={true}
-            offset={-80}
             spy={true}
             exact='true'
          >
@@ -15,7 +14,7 @@ export const NavLinksDesktop = () => {
          <Navlink
             to="about"
             smooth={true}
-            offset={-80}
+            offset={-70}
             spy={true}
             exact='true'
          >
@@ -24,7 +23,7 @@ export const NavLinksDesktop = () => {
          <Navlink
             to="projects"
             smooth={true}
-            offset={-80}
+            offset={70}
             spy={true}
             exact='true'
          >
@@ -33,7 +32,7 @@ export const NavLinksDesktop = () => {
          <Navlink
             to="contact"
             smooth={true}
-            offset={-80}
+            offset={70}
             spy={true}
             exact='true'
          >

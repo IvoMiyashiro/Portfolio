@@ -5,11 +5,12 @@ import { BsGithub } from 'react-icons/bs';
 export const ProjectsSection = styled.div`
    width: 85%;
    margin: 0 auto;
-   padding: 5em 0;
+   padding-top: 5em;
 
    ${bps.desktop} {
       width: 80%;
       max-width: 1000px;
+      padding-top: 7em;
    }
 `;
 

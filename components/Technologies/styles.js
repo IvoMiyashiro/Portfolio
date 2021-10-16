@@ -5,7 +5,7 @@ import { BsCheckCircle } from 'react-icons/bs';
 export const TechnologiesContainer = styled.section`
    width: 85%;
    margin: 0 auto;
-   padding: 5em 0;
+   padding-top: 5em;
 
    ${bps.desktop} {
       width: 80%;
@@ -40,7 +40,7 @@ export const TechContainer = styled.div`
 `;
 
 export const SvgSection = styled.section`
-   display: flex;
+   display: none;
    flex-wrap: wrap;
    width: 290px;
    min-width: 290px;
@@ -52,6 +52,7 @@ export const SvgSection = styled.section`
    margin: 0 auto;
 
    ${bps.desktop} {
+      display: flex;
       order: 0;
       margin: 0;
    }

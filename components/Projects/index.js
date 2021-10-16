@@ -1,7 +1,20 @@
 import Image from 'next/image';
 
 import { HighlightText, SectionTitle } from '../../styles/general';
-import { Anchor, Button, ButtonsSection, CardSection, Description, GithubButton, GithubIcon, Legend, ProjectsSection, ProyectCard, ProyectsCardsContainer, Title } from './styles';
+import { 
+   Anchor,
+   Button,
+   ButtonsSection, 
+   CardSection,
+   Description,
+   GithubButton,
+   GithubIcon,
+   Legend,
+   ProjectsSection,
+   ProyectCard,
+   ProyectsCardsContainer,
+   Title
+} from './styles';
 
 
 export const Projects = () => {
