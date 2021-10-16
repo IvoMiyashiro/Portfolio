@@ -136,11 +136,11 @@ export const Bars = styled.div`
 export const MobileMenu = styled.menu`
    background: ${(props) => props.theme.mobileMenuBackground};
    position: absolute;
-   width: 100vw;
+   width: 100%;
    height: 0px;
    overflow: hidden;
-   top: -18px;
-   right: -32px;
+   top: 0;
+   left: 0;
    z-index: 1;
    margin: 0;
    padding-right: 1.15em;

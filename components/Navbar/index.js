@@ -52,11 +52,11 @@ export const Navbar = () => {
                   onClick={handleMobileMenuOpen}
                >
                   <Bars open={mobileMenuOpen.toString()}></Bars>
-                  <HambuerguerMenu
-                     open={mobileMenuOpen.toString()}
-                     setMobileMenuOpen={setMobileMenuOpen}
-                  />
                </BarsButton>
+               <HambuerguerMenu
+                  open={mobileMenuOpen.toString()}
+                  setMobileMenuOpen={setMobileMenuOpen}
+               />
             </BarsSection>
             <NavlinksSection>
                <NavLinksDesktop />

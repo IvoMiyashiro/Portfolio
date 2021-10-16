@@ -25,6 +25,7 @@ export const LoaderContainer = styled.div`
 `;
 
 export const LoaderWrapper = styled.section`
+   margin-left: 3em;
    width: 100px;
    height: 100px;
    position: relative;

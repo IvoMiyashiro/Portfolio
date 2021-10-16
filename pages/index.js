@@ -1,3 +1,4 @@
+import { useEffect, useState, useRef } from 'react';
 import Head from 'next/head';
 import { Contact } from '../components/Contact';
 import { Navbar } from '../components/Navbar';
@@ -15,10 +16,18 @@ import {
 } from '../styles/general';
 import { GradientAbout } from '../styles/general';
 import { Loader } from '../components/Loader';
-import { useEffect, useState } from 'react';
 
 export default function Home() {
+   const aboutRef = useRef(null);
+   const techRef = useRef(null);
+   const projectsRef = useRef(null);
+   const contactRef = useRef(null);
+
    const [loader, setLoader] = useState(false);
+   const [showAbout, setShowAbout] = useState(false);
+   const [showTech, setShowTech] = useState(false);
+   const [showProjects, setShowProjects] = useState(false);
+   const [showContact, setShowContact] = useState(false);
 
    useEffect(() => {
       const interval = setInterval(() => {
@@ -27,6 +36,38 @@ export default function Home() {
       return () => {
          clearInterval(interval);
       };
+   }, []);
+
+   useEffect(() => {
+      const handleShowSection = () => {
+         const aboutSectionPosition =
+            aboutRef.current.getBoundingClientRect().top;
+         const techSectionPosition =
+            techRef.current.getBoundingClientRect().top;
+         const projectsSectionPosition =
+            projectsRef.current.getBoundingClientRect().top;
+         const contactSectionPosition =
+            contactRef.current.getBoundingClientRect().top;
+         const windowPosition = window.innerHeight;
+
+         if (aboutSectionPosition + 250 < windowPosition) {
+            setShowAbout(true);
+         }
+
+         if (techSectionPosition + 250 < windowPosition) {
+            setShowTech(true);
+         }
+
+         if (projectsSectionPosition + 250 < windowPosition) {
+            setShowProjects(true);
+         }
+
+         if (contactSectionPosition + 250 < windowPosition) {
+            setShowContact(true);
+         }
+      };
+
+      window.addEventListener('scroll', handleShowSection);
    }, []);
 
    return (
@@ -61,10 +102,24 @@ export default function Home() {
                <GradientAbout />
                <SocialMediaColumn />
                <Hero />
-               <About />
-               <Technologies />
-               <Projects />
-               <Contact />
+               <div className={`hidden ${showAbout && 'show'}`} ref={aboutRef}>
+                  <About />
+               </div>
+               <div className={`hidden ${showTech && 'show'}`} ref={techRef}>
+                  <Technologies />
+               </div>
+               <div
+                  className={`hidden ${showProjects && 'show'}`}
+                  ref={projectsRef}
+               >
+                  <Projects />
+               </div>
+               <div
+                  className={`hidden ${showContact && 'show'}`}
+                  ref={contactRef}
+               >
+                  <Contact />
+               </div>
                <Footer />
             </PageContainer>
          )}

@@ -5,6 +5,7 @@ export const AboutSection = styled.div`
    background: transparent;
    position: relative;
    z-index: 0;
+   transition: 0.3s ease-in-out;
 `;
 
 export const AboutContainer = styled.div`

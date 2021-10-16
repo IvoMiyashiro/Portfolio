@@ -21,7 +21,7 @@ export const Hero = () => {
 
       const animation2 = setInterval(() => {
          setUnderlineAnimation(true);
-      }, [1500]);
+      }, [1700]);
       return () => {
          clearInterval(animation1);
          clearInterval(animation2);
