@@ -1,6 +1,11 @@
 import { MobileMenu, MobileNavLinksList, Navlink } from './styles';
 
-export const HambuerguerMenu = ({ open }) => {
+export const HambuerguerMenu = ({ open, setMobileMenuOpen }) => {
+
+   const handleOpenMenu = () => {
+      setMobileMenuOpen(prev => !prev);
+   };
+   
    return (
       <MobileMenu open={open}>
          <MobileNavLinksList>
@@ -11,6 +16,7 @@ export const HambuerguerMenu = ({ open }) => {
                spy={true}
                speed={500}
                exact='true'
+               onClick={handleOpenMenu}
             >
                Home
             </Navlink>
@@ -20,26 +26,29 @@ export const HambuerguerMenu = ({ open }) => {
                offset={-80}
                spy={true}
                exact='true'
+               onClick={handleOpenMenu}
             >
                About
             </Navlink>
             <Navlink
                to="projects"
                smooth={true}
-               offset={-80}
+               offset={20}
                spy={true}
                speed={500}
                exact='true'
+               onClick={handleOpenMenu}
             >
                Projects
             </Navlink>
             <Navlink
                to="contact"
                smooth={true}
-               offset={-80}
+               offset={50}
                spy={true}
                speed={500}
                exact='true'
+               onClick={handleOpenMenu}
             >
                Contact
             </Navlink>

@@ -10,26 +10,33 @@ export const NavContainer = styled.header`
    height: 80px;
    margin-top: -80px;
    z-index: 10;
-   transition: top .2s ease-in-out;
+   transition: top 0.2s ease-in-out;
 `;
 
 export const Nav = styled.nav`
    display: flex;
    align-items: center;
    justify-content: space-between;
-   padding: 0em 2em;
+   width: 90%;
    max-width: 1640px;
    margin: 0 auto;
    height: 100%;
 `;
 
-export const LogoSection = styled.section`
+export const LogoSection = styled(Link)`
+   position: relative;
+   width: 80px;
+   height: 80px;
+   cursor: pointer;
+   transition: transform 0.3s ease-in-out;
 
+   &:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease-in-out;
+   }
 `;
 
-export const BarsSection = styled.section`
-
-`;
+export const BarsSection = styled.section``;
 
 export const NavlinksSection = styled.section`
    display: none;
@@ -49,16 +56,16 @@ export const Navlink = styled(Link)`
    font-size: 1rem;
    font-family: 'Fira Mono', sans-serif;
    font-weight: 500;
-   padding: .5em .65em;
+   padding: 0.5em 0.65em;
    border-radius: 4px;
-   color: ${props => props.theme.primaryText};
+   color: ${(props) => props.theme.primaryText};
 
    &:hover {
-      background: ${props => props.theme.background};
+      background: ${(props) => props.theme.background};
    }
 
    &.active {
-      background: ${props => props.theme.third};
+      background: ${(props) => props.theme.third};
    }
 `;
 
@@ -74,9 +81,8 @@ export const BarsButton = styled.div`
 
    ${bps.desktop} {
       display: none;
-}
+   }
 `;
-
 
 const barsAnimation = `
    transform: translateX(-100px);
@@ -107,7 +113,7 @@ export const Bars = styled.div`
 
    &::after,
    &::before {
-      content: "";
+      content: '';
       position: absolute;
       width: 30px;
       height: 4px;
@@ -124,12 +130,11 @@ export const Bars = styled.div`
       transform: translateY(12px);
    }
 
-   ${props => props.open === 'true'
-      && barsAnimation}
+   ${(props) => props.open === 'true' && barsAnimation}
 `;
 
 export const MobileMenu = styled.menu`
-   background: ${props => props.theme.mobileMenuBackground};
+   background: ${(props) => props.theme.mobileMenuBackground};
    position: absolute;
    width: 100vw;
    height: 0px;
@@ -142,10 +147,9 @@ export const MobileMenu = styled.menu`
    display: flex;
    align-items: center;
    justify-content: center;
-   transition: height .3s ease-in-out;
+   transition: height 0.3s ease-in-out;
 
-   ${props => props.open === 'true'
-      && mobileMenu}
+   ${(props) => props.open === 'true' && mobileMenu}
 `;
 
 export const MobileNavLinksList = styled.ul`

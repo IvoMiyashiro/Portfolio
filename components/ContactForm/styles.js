@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Form = styled.form`
    width: 100%;
    max-width: 400px;
+   min-width: 300px;
    box-shadow:
    0px 0px 2.2px rgba(0, 0, 0, 0.014),
    0px 0px 5.3px rgba(0, 0, 0, 0.02),
@@ -16,6 +17,9 @@ export const Form = styled.form`
    gap: 2em;
    padding: 1.25em;
    border-radius: 8px;
+   margin: 0 auto;
+   background: #fff;
+   z-index: 1;
 `;
 
 export const Button = styled.button`

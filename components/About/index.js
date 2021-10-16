@@ -1,11 +1,10 @@
-import { HighlightText, SectionTitle } from '../../styles/general';
+import Image from 'next/image';
 
+import { HighlightText, SectionTitle } from '../../styles/general';
 import {
    AboutContainer,
    AboutSection,
    ImageContainer,
-   GradientCircle,
-   ImageEg,
    MainInfoSection,
    TextInfo,
    FirstP,
@@ -20,8 +19,7 @@ export const About = () => {
             <SectionTitle> Acerca de mi <HighlightText>.</HighlightText> </SectionTitle>
             <MainInfoSection>
                <ImageContainer>
-                  <GradientCircle></GradientCircle>
-                  <ImageEg></ImageEg>
+                  <Image src="/assets/yo.png" layout="fill" objectFit="cover" />
                </ImageContainer>
                <TextInfo>
                   <FirstP>

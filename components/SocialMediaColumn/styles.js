@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { bps } from '../../styles/breakpoints';
+import { Link } from 'react-scroll';
 import { BsLinkedin } from 'react-icons/bs';
 import { BsGithub } from 'react-icons/bs';
 import { IoMailOpenSharp } from 'react-icons/io5';
@@ -21,6 +22,7 @@ export const SocialMediaList = styled.ul`
    left: 2em;
    padding: 0;
    margin: 0;
+   z-index: 1;
 
    ${bps.desktop} {
       display: flex;
@@ -37,26 +39,30 @@ export const SocialMediaAnchor = styled.a`
 export const GithubIcon = styled(BsGithub)`
    ${commun}
    &:hover {
-      color: ${props => props.theme.highlight};
+      color: ${(props) => props.theme.highlight};
    }
 `;
 
 export const LinkedInIcon = styled(BsLinkedin)`
    ${commun}
    &:hover {
-      color: ${props => props.theme.highlight};
+      color: ${(props) => props.theme.highlight};
    }
 `;
 
 export const EmailIcon = styled(IoMailOpenSharp)`
    ${commun}
    &:hover {
-      color: ${props => props.theme.highlight};
+      color: ${(props) => props.theme.highlight};
    }
 `;
 
 export const Line = styled.div`
    height: 100px;
    width: 1px;
-   background: ${props => props.theme.primary};
+   background: ${(props) => props.theme.primary};
+`;
+
+export const ContactScroll = styled(Link)`
+   cursor: pointer;
 `;

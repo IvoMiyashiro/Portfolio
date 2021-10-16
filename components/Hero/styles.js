@@ -3,8 +3,10 @@ import { bps } from '../../styles/breakpoints';
 
 export const HeroSection = styled.div`
    min-height: 100vh;
+   overflow-x: hidden;
+   overflow-y: visible;
+   position: relative;
 `;
-
 
 export const HeroContainer = styled.div`
    display: flex;
@@ -45,7 +47,7 @@ export const CoolUnderline = styled.div`
    bottom: -1px;
    height: 8px;
    width: 100%;
-   background: linear-gradient(90deg, #ff9897 0%, #f650a0  100%);
+   background: linear-gradient(90deg, #ff9897 0%, #f650a0 100%);
    transform: rotate(-0.5deg);
 
    ${bps.desktop} {
@@ -54,7 +56,7 @@ export const CoolUnderline = styled.div`
 `;
 
 export const Quote = styled.legend`
-   font-size: .9rem;
+   font-size: 0.9rem;
    max-width: 600px;
    line-height: 1.5em;
    text-align: justify;
@@ -70,8 +72,8 @@ export const Button = styled.button`
    max-width: 275px;
    height: 50px;
    background: transparent;
-   color: ${props => props.theme.secondary};
-   background: ${props => props.theme.primary};
+   color: ${(props) => props.theme.secondary};
+   background: ${(props) => props.theme.primary};
    border-radius: 4px;
    font-size: 1.1rem;
    cursor: pointer;
@@ -79,13 +81,13 @@ export const Button = styled.button`
    font-family: 'Fira Mono', sans-serif;
    font-weight: 500;
    letter-spacing: 1px;
-   transition: .2s ease-in-out;
+   transition: 0.2s ease-in-out;
    border: none;
 
    &:hover {
-      background: ${props => props.theme.primary};
-      color: ${props => props.theme.secondary};
-      transition: .2s ease-in-out;
+      background: ${(props) => props.theme.primary};
+      color: ${(props) => props.theme.secondary};
+      transition: 0.2s ease-in-out;
    }
 
    ${bps.desktop} {
