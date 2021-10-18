@@ -130,7 +130,7 @@ export const Bars = styled.div`
       transform: translateY(12px);
    }
 
-   ${(props) => props.open === 'true' && barsAnimation}
+   ${(props) => props.isOpen === 'true' && barsAnimation}
 `;
 
 export const MobileMenu = styled.menu`
@@ -149,7 +149,7 @@ export const MobileMenu = styled.menu`
    justify-content: center;
    transition: height 0.3s ease-in-out;
 
-   ${(props) => props.open === 'true' && mobileMenu}
+   ${(props) => props.isOpen === 'true' && mobileMenu}
 `;
 
 export const MobileNavLinksList = styled.ul`

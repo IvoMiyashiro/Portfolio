@@ -1,6 +1,7 @@
 import Image from 'next/image';
 
 import { HighlightText, SectionTitle } from '../../styles/general';
+import { Technologies } from '../Technologies';
 import {
    AboutContainer,
    AboutSection,
@@ -27,12 +28,12 @@ export const About = () => {
                   <FirstP>
                      Mi nombre es Ivan, tengo 22 años y vivo en Buenos Aires,
                      Argentina. Soy estudiante de Ingeniería Informática en la
-                     Universidad Católica Argentina de Buenos Aires. Hace
-                     aproximadamente un año comencé a tener interés dentro del
+                     Universidad Católica Argentina de Buenos Aires. Hace un año
+                     comencé a tener interés dentro del
                      mundo del desarrollo web, tanto Frontend como Backend.
-                     Desde ese momento me dediqué a estudiar tecnologías básicas
-                     como HTML y CSS hasta dominar JavaScript y algunas de sus
-                     librerías populares como ReactJS y NodeJS.
+                     Desde ese momento me dediqué a estudiar sin descansar diferentes
+                     tecnologías que se utilizan en el mundo del desarrollo web para
+                     convertirme en un mejor programador.
                   </FirstP>
                   <SecondP>
                      Me considero una persona apasionada por la tecnología, con
@@ -42,6 +43,7 @@ export const About = () => {
                </TextInfo>
             </MainInfoSection>
          </AboutContainer>
+         <Technologies />
       </AboutSection>
    );
 };

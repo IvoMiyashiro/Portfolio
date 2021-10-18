@@ -78,7 +78,7 @@ export const GradientCircle = styled.div`
    filter: blur(43px);
 `;
 
-export const TextInfo = styled.p`
+export const TextInfo = styled.section`
    font-size: 0.9rem;
    line-height: 1.5em;
    text-align: justify;

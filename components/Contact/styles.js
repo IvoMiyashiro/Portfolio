@@ -1,3 +1,4 @@
+import { BsCheckCircle } from 'react-icons/bs';
 import styled from 'styled-components';
 import { bps } from '../../styles/breakpoints';
 
@@ -78,4 +79,25 @@ export const GradientContainer = styled.div`
    top: -60px;
    right: 100px;
    z-index: -1;
+`;
+
+export const MessageContainer = styled.div`
+   position: fixed;
+   padding: 0.5em;
+   background-color: #B1E693;
+   color: green;
+   border: 2px solid #6ECB63;
+   bottom: 0;
+   top: 50%;
+   left: 50%;
+`;
+
+export const Message = styled.p`
+   font-size: 0.85rem;
+   margin: 0;
+`;
+
+export const CheckIcon = styled(BsCheckCircle)`
+   color: #fff;
+   font-size: 1.35rem;
 `;

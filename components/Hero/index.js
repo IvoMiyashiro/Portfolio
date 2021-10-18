@@ -48,8 +48,7 @@ export const Hero = () => {
                </div>
                <Quote>
                   Hace un año comence mi aventura dentro del mundo del
-                  desarrollo web. Actualmente estoy en busca de oportunidades
-                  para ayudar a solucionar problemas de software .
+                  desarrollo web y hoy me especializo en tecnologías de frontend como ReactJS.
                </Quote>
                <Button> Descargar CV </Button>
             </HeroContainer>

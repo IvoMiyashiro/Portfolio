@@ -48,13 +48,13 @@ export const Navbar = () => {
             </LogoSection>
             <BarsSection>
                <BarsButton
-                  open={mobileMenuOpen.toString()}
+                  isOpen={mobileMenuOpen.toString()}
                   onClick={handleMobileMenuOpen}
                >
-                  <Bars open={mobileMenuOpen.toString()}></Bars>
+                  <Bars isOpen={mobileMenuOpen.toString()}></Bars>
                </BarsButton>
                <HambuerguerMenu
-                  open={mobileMenuOpen.toString()}
+                  isOpen={mobileMenuOpen.toString()}
                   setMobileMenuOpen={setMobileMenuOpen}
                />
             </BarsSection>

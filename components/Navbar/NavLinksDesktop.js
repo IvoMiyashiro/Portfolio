@@ -54,7 +54,6 @@ export const NavLinksDesktop = () => {
                About
             </Navlink>
          )}
-
          {link2 && (
             <Navlink
                to="projects"

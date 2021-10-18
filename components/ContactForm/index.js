@@ -7,14 +7,14 @@ import { TextareaControl } from '../TextareaControl';
 import { Button, Form } from './styles';
 
 export const ContactForm = () => {
-   const regEx =
-      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+   const regEx = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
    const [inputValue, setInputValue] = useState('');
    const [inputError, setInputError] = useState(null);
    const [textareaValue, setTextareaValue] = useState('');
    const [textareaError, setTextareaError] = useState(null);
-   const [formSubmited, setFormSubmited] = useState(false);
+   const [formSubmited, setFormSubmited] = useState('Enviar');
+   const [buttonDisabled, setButtonDisabled] = useState(false);
 
    const handleSubmit = (e) => {
       e.preventDefault();
@@ -31,10 +31,11 @@ export const ContactForm = () => {
          return;
       }
 
-      setFormSubmited(true);
+      setButtonDisabled(true);
+      setFormSubmited(<Spinner />);
       emailjs
          .sendForm(
-            'gmail',
+            'service_ws24tzo',
             'template_wgfw0a1',
             e.target,
             'user_FhRsYQWQXgynexh3PJEV1'
@@ -42,6 +43,7 @@ export const ContactForm = () => {
          .then(
             () => {
                setFormSubmited(false);
+               setFormSubmited('Mensaje enviado');
             },
             (error) => {
                console.log(error.text);
@@ -64,7 +66,7 @@ export const ContactForm = () => {
             formError={textareaError}
             setFormError={setTextareaError}
          />
-         <Button>{formSubmited ? <Spinner /> : 'Enviar'}</Button>
+         <Button disabled={buttonDisabled}>{formSubmited}</Button>
       </Form>
    );
 };

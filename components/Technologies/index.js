@@ -9,7 +9,7 @@ import { TechCategoriesContainer, TechnologiesContainer } from './styles';
 
 export const Technologies = () => {
    return (
-      <TechnologiesContainer>
+      <TechnologiesContainer id="technologies">
          <SectionTitle> Tecnologías <HighlightText>.</HighlightText> </SectionTitle>
          <TechCategoriesContainer>
             <Frontend />

@@ -1,10 +1,15 @@
 import { ContactForm } from '../ContactForm';
 import { HighlightText } from '../../styles/general';
-import { ContactContainer, ContactSection, Content, TitleContainer, Title, GradientContainer } from './styles';
+import {
+   ContactContainer,
+   ContactSection,
+   Content,
+   TitleContainer,
+   Title,
+   GradientContainer
+} from './styles';
 
 export const Contact = () => {
-
-
    return (
       <ContactSection id="contact" >
          <ContactContainer>
