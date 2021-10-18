@@ -22,7 +22,7 @@ export const About = () => {
             </SectionTitle>
             <MainInfoSection>
                <ImageContainer>
-                  <Image src="/assets/yo.png" layout="fill" objectFit="cover" />
+                  <Image src="/assets/yo.png" alt="Ivan Miyashiro" layout="fill" objectFit="cover" />
                </ImageContainer>
                <TextInfo>
                   <FirstP>

@@ -64,6 +64,7 @@ export default function Home() {
    return (
       <>
          <Head>
+            <meta name="keywords" content="Ivan,Miyashiro,Ivan Miyashiro,desarrollador,developer,frontend,portfolio,portafolio" />
             <link rel="preconnect" href="https://fonts.googleapis.com" />
             <link
                rel="preconnect"
@@ -78,6 +79,8 @@ export default function Home() {
                rel="stylesheet"
                href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
             />
+            <title> Ivan Miyashiro | Frontend Developer </title>
+            <meta name="description" content="Ivan Miyashiro es un desarrollador frontend que se dedica a crear aplicaciones en la web." />
          </Head>
 
          <LoaderContainer
