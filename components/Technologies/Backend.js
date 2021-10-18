@@ -1,7 +1,6 @@
 import NodeLogo from '../Logos/Node';
 import MongoLogo from '../Logos/Mongo';
 import ExpressLogo from '../Logos/Express';
-import MySqlLogo from '../Logos/MySql';
 
 import { Headline } from '../../styles/general';
 import { TextInfo } from '../About/styles';
@@ -36,7 +35,6 @@ export const Backend = () => {
             <NodeLogo width={85} height={25} />
             <MongoLogo width={75} height={65} />
             <ExpressLogo width={75} height={35} />
-            <MySqlLogo width={75} height={65} />
          </SvgSection>
       </TechContainer>
    );
