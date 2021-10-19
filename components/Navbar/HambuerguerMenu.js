@@ -33,7 +33,7 @@ export const HambuerguerMenu = ({ isOpen, setMobileMenuOpen }) => {
             <Navlink
                to="projects"
                smooth={true}
-               offset={20}
+               offset={-20}
                spy={true}
                speed={500}
                exact='true'
@@ -44,7 +44,7 @@ export const HambuerguerMenu = ({ isOpen, setMobileMenuOpen }) => {
             <Navlink
                to="contact"
                smooth={true}
-               offset={50}
+               offset={0}
                spy={true}
                speed={500}
                exact='true'
