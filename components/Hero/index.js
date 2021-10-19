@@ -33,7 +33,7 @@ export const Hero = () => {
       <HeroSection id="hero">
          {textAnimation && (
             <HeroContainer className="animate__animated animate__fadeIn">
-               <Headline> Hola Mundo! Mi nombre es </Headline>
+               <Headline> Hola! Mi nombre es </Headline>
                <div>
                   <MainTitle> Ivan Miyashiro. </MainTitle>
                   <MainTitle>
@@ -49,7 +49,7 @@ export const Hero = () => {
                </div>
                <Quote>
                   Hace un año comence mi aventura dentro del mundo del
-                  desarrollo web y hoy me especializo en tecnologías de frontend como ReactJS.
+                  desarrollo web y hoy me especializo en tecnologías como ReactJS.
                </Quote>
 
                <a href='https://drive.google.com/file/d/1UbHjTbi1M1cMvEh-Wtsi8dhpOn0Ngt6I/view?usp=sharing' target="_blank" rel="noreferrer"> <Button>Descargar CV</Button> </a>

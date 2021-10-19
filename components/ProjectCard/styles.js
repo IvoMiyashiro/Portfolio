@@ -100,6 +100,9 @@ export const Button = styled.button`
 `;
 
 export const GithubButton = styled.button`
+   display: flex;
+   justify-content: center;
+   align-items: center;
    border: 2px solid #000;
    background: transparent;
    color: #fff;

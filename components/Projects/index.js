@@ -12,10 +12,10 @@ export const Projects = () => {
       tech: 'ReactJS',
       title: 'Another TodoApp',
       desc: 'Un TodoApp desarrollado con ReactJS en el frontend y NodeJS en el backend. En este proyecto personal me dediqué a aprender conceptos de NodeJS y asentar mis conocimientos de Redux. ',
-      href: 'https://mern-todoapp.vercel.app/',
+      href: 'https://another-todoapp.vercel.app/',
       alt: 'TodoApp',
       img: '/assets/todoapp-screenshot.png',
-      repo: 'https://github.com/IvoMiyashiro/MERN-Todo-Frontend'
+      repo: 'https://github.com/IvoMiyashiro/TodoApp-frontend'
 
    }, {
       id: '1',
@@ -25,7 +25,7 @@ export const Projects = () => {
       href: 'https://journald-app.vercel.app/',
       alt: 'JournaldApp',
       img: '/assets/journaldapp-screenshot.png',
-      repo: 'https://github.com/IvoMiyashiro/JournaldApp"'
+      repo: 'https://github.com/IvoMiyashiro/JournaldApp'
    }];
 
    return (
