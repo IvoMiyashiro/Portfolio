@@ -1,5 +1,6 @@
+import { Link } from 'react-scroll';
 import { SocialMediaAnchor } from '../SocialMediaColumn/styles';
-import { FooterContainer, SocialMediaContainer, Text,EmailIcon, GithubIcon, LinkedInIcon } from './styles';
+import { FooterContainer, SocialMediaContainer, Text, EmailIcon, GithubIcon, LinkedInIcon } from './styles';
 
 export const Footer = () => {
    return (
@@ -9,12 +10,18 @@ export const Footer = () => {
             <SocialMediaAnchor href="https://github.com/IvoMiyashiro" target="_blank">
                <GithubIcon />
             </SocialMediaAnchor>
-            <SocialMediaAnchor href="https://www.linkedin.com/in/ivan-miyashiro-18845b200/" target="_blank">
+            <SocialMediaAnchor href="https://www.linkedin.com/in/ivanmiyashiro/" target="_blank">
                <LinkedInIcon />
             </SocialMediaAnchor>
-            <SocialMediaAnchor href="https://github.com/IvoMiyashiro" target="_blank">
+            <Link
+               to="contact"
+               smooth={true}
+               offset={90}
+               spy={true}
+               exact="true"
+            >
                <EmailIcon />
-            </SocialMediaAnchor>
+            </Link>
          </SocialMediaContainer>
       </FooterContainer>
    );

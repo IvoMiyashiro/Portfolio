@@ -77,7 +77,7 @@ export const BarsButton = styled.div`
    align-items: center;
    justify-content: center;
    cursor: pointer;
-   transition: all 0.5s ease-in-out;
+   transition: all 0.2s ease-in-out;
 
    ${bps.desktop} {
       display: none;
@@ -100,7 +100,7 @@ const barsAnimation = `
 
 const mobileMenu = `
    height: 100vh;
-   transition: height .3s ease-in-out;
+   transition: height .2s ease-in-out;
 `;
 
 export const Bars = styled.div`
@@ -108,7 +108,7 @@ export const Bars = styled.div`
    height: 4px;
    background: #000;
    border-radius: 5px;
-   transition: all 0.3s ease-in-out;
+   transition: all 0.2s ease-in-out;
    z-index: 10;
 
    &::after,
@@ -119,7 +119,7 @@ export const Bars = styled.div`
       height: 4px;
       background: #000;
       border-radius: 5px;
-      transition: all 0.3s ease-in-out;
+      transition: all 0.2s ease-in-out;
    }
 
    &::before {
@@ -135,7 +135,7 @@ export const Bars = styled.div`
 
 export const MobileMenu = styled.menu`
    background: ${(props) => props.theme.mobileMenuBackground};
-   position: absolute;
+   position: fixed;
    width: 100%;
    height: 0px;
    overflow: hidden;
@@ -147,7 +147,7 @@ export const MobileMenu = styled.menu`
    display: flex;
    align-items: center;
    justify-content: center;
-   transition: height 0.3s ease-in-out;
+   transition: height 0.2s ease-in-out;
 
    ${(props) => props.isOpen === 'true' && mobileMenu}
 `;

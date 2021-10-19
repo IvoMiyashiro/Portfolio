@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { HambuerguerMenu } from './HambuerguerMenu';
 import { NavLinksDesktop } from './NavLinksDesktop';
 import Image from 'next/image';
@@ -20,25 +20,6 @@ export const Navbar = () => {
    const handleMobileMenuOpen = () => {
       setMobileMenuOpen((prev) => !prev);
    };
-
-   useEffect(() => {
-      let prevPosition = window.pageYOffset;
-      const handleHideNavbar = () => {
-         let currentPosition = window.pageYOffset;
-
-         if (prevPosition > currentPosition) {
-            navbarRef.current.style.top = 0;
-         } else {
-            navbarRef.current.style.top = '-80px';
-         }
-         prevPosition = currentPosition;
-      };
-
-      window.addEventListener('scroll', handleHideNavbar);
-      return () => {
-         window.removeEventListener('scroll', handleHideNavbar);
-      };
-   }, []);
 
    return (
       <NavContainer ref={navbarRef}>

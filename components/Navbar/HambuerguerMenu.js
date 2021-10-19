@@ -1,13 +1,13 @@
 import { MobileMenu, MobileNavLinksList, Navlink } from './styles';
 
-export const HambuerguerMenu = ({ open, setMobileMenuOpen }) => {
+export const HambuerguerMenu = ({ isOpen, setMobileMenuOpen }) => {
 
    const handleOpenMenu = () => {
       setMobileMenuOpen(prev => !prev);
    };
-   
+
    return (
-      <MobileMenu open={open}>
+      <MobileMenu isOpen={isOpen}>
          <MobileNavLinksList>
             <Navlink
                to="hero"

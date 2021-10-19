@@ -115,9 +115,7 @@ export const GithubIcon = styled(BsGithub)`
    color: #000;
 `;
 
-export const Anchor = styled.a`
-
-`;
+export const Anchor = styled.a``;
 
 export const RepoAnchor = styled.a`
    &:hover {

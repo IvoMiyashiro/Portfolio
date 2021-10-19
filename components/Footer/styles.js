@@ -5,7 +5,7 @@ import { BsGithub } from 'react-icons/bs';
 import { IoMailOpenSharp } from 'react-icons/io5';
 
 const commun = `{
-   font-size: 1rem;
+   font-size: 1.25rem;
    transition: .2s ease-in-out;
 
    &:hover {
@@ -18,7 +18,7 @@ export const FooterContainer = styled.footer`
    display: flex;
    flex-direction: column;
    margin-top: 8em;
-   margin-bottom: .5em;
+   padding: 1em 0;
 `;
 
 export const Text = styled.p`

@@ -43,7 +43,7 @@ export const SocialMediaColumn = () => {
          )}
          {link2 && (
             <SocialMediaAnchor
-               href="https://www.linkedin.com/in/ivan-miyashiro-18845b200/"
+               href="https://www.linkedin.com/in/ivanmiyashiro/"
                target="_blank"
                className="animate__animated animate__zoomIn"
             >

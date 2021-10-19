@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+
 import {
    Button,
    CoolUnderline,
@@ -50,7 +51,9 @@ export const Hero = () => {
                   Hace un año comence mi aventura dentro del mundo del
                   desarrollo web y hoy me especializo en tecnologías de frontend como ReactJS.
                </Quote>
-               <Button> Descargar CV </Button>
+
+               <a href='https://drive.google.com/file/d/1UbHjTbi1M1cMvEh-Wtsi8dhpOn0Ngt6I/view?usp=sharing' target="_blank" rel="noreferrer"> <Button>Descargar CV</Button> </a>
+
             </HeroContainer>
          )}
       </HeroSection>
