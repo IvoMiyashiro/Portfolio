@@ -39,8 +39,7 @@ export const Hero = () => {
                   <MainTitle>
                      Un apasionado&nbsp;
                      <UnderlineWord>
-                        {' '}
-                        Web Dev.{' '}
+                        Web Dev.
                         {underlineAnimation && (
                            <CoolUnderline className="animate__animated animate__zoomIn"></CoolUnderline>
                         )}
@@ -49,11 +48,17 @@ export const Hero = () => {
                </div>
                <Quote>
                   Hace un año comence mi aventura dentro del mundo del
-                  desarrollo web y hoy me especializo en tecnologías como ReactJS.
+                  desarrollo web y hoy me especializo en tecnologías como
+                  ReactJS.
                </Quote>
 
-               <a href='https://drive.google.com/file/d/1UbHjTbi1M1cMvEh-Wtsi8dhpOn0Ngt6I/view?usp=sharing' target="_blank" rel="noreferrer"> <Button>Descargar CV</Button> </a>
-
+               <a
+                  href="https://drive.google.com/file/d/1Iwr84O8BKTxx375q79krI_XaP0Dej5Ke/view?usp=sharing"
+                  target="_blank"
+                  rel="noreferrer"
+               >
+                  <Button>Descargar CV</Button>
+               </a>
             </HeroContainer>
          )}
       </HeroSection>
