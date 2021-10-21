@@ -53,7 +53,7 @@ export const Hero = () => {
                </Quote>
 
                <a
-                  href="https://drive.google.com/file/d/1Iwr84O8BKTxx375q79krI_XaP0Dej5Ke/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1i6hTHH_8n2b_MdTmLfsRnQfVaEHNN7RE/view?usp=sharing"
                   target="_blank"
                   rel="noreferrer"
                >
