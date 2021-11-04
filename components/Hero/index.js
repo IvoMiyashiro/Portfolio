@@ -1,14 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import {
-   Button,
-   CoolUnderline,
-   HeroSection,
-   MainTitle,
-   Quote,
-   UnderlineWord,
-   HeroContainer,
-} from './styles';
+import { Button, CoolUnderline, HeroSection, MainTitle, Quote, UnderlineWord, HeroContainer } from './styles';
 import { Headline } from '../../styles/general';
 
 export const Hero = () => {
@@ -35,28 +27,17 @@ export const Hero = () => {
             <HeroContainer className="animate__animated animate__fadeIn">
                <Headline> Hola! Mi nombre es </Headline>
                <div>
-                  <MainTitle> Ivan Miyashiro. </MainTitle>
+                  <MainTitle> Ivan Miyashiro </MainTitle>
                   <MainTitle>
-                     Un apasionado&nbsp;
                      <UnderlineWord>
-                        Web Dev.
-                        {underlineAnimation && (
-                           <CoolUnderline className="animate__animated animate__zoomIn"></CoolUnderline>
-                        )}
+                        Frontend Dev.
+                        {underlineAnimation && <CoolUnderline className="animate__animated animate__zoomIn"></CoolUnderline>}
                      </UnderlineWord>
                   </MainTitle>
                </div>
-               <Quote>
-                  Hace un año comence mi aventura dentro del mundo del
-                  desarrollo web y hoy me especializo en tecnologías como
-                  ReactJS.
-               </Quote>
+               <Quote>Hace un año comence mi aventura dentro del mundo del desarrollo web y hoy me especializo en tecnologías como ReactJS.</Quote>
 
-               <a
-                  href="https://drive.google.com/file/d/1i6hTHH_8n2b_MdTmLfsRnQfVaEHNN7RE/view?usp=sharing"
-                  target="_blank"
-                  rel="noreferrer"
-               >
+               <a href="https://drive.google.com/file/d/1i6hTHH_8n2b_MdTmLfsRnQfVaEHNN7RE/view?usp=sharing" target="_blank" rel="noreferrer">
                   <Button>Descargar CV</Button>
                </a>
             </HeroContainer>

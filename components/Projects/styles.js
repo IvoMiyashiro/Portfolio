@@ -15,8 +15,7 @@ export const ProjectsSection = styled.div`
 
 export const ProjectsCardsContainer = styled.section`
    display: flex;
-   flex-direction: column;
+   flex-wrap: wrap;
    gap: 3em;
    margin-top: 3em;
 `;
-

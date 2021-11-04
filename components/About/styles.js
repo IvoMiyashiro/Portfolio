@@ -23,7 +23,7 @@ export const MainInfoSection = styled.section`
    flex-direction: column;
    align-items: center;
    gap: 3em;
-   margin-top: 3.5em;
+   margin-top: 1.5em;
 
    ${bps.desktop} {
       flex-direction: row;
@@ -53,27 +53,7 @@ export const GradientCircle = styled.div`
    width: 265px;
    height: 265px;
    border-radius: 21rem;
-   background: radial-gradient(
-         110.88% 79.69% at 47.77% 151.82%,
-         #ffec45 0%,
-         rgba(255, 236, 69, 0.3) 54.92%,
-         rgba(255, 236, 69, 0) 96.11%
-      ),
-      radial-gradient(
-         50% 68.23% at 98.21% 96.61%,
-         #41d1b7 0%,
-         rgba(65, 209, 183, 0.35) 49.27%,
-         rgba(65, 209, 183, 0) 100%
-      ),
-      radial-gradient(
-         83.71% 75.52% at -10.04% 2.86%,
-         #8263db 0%,
-         rgba(129, 114, 218, 0.26) 56.87%,
-         rgba(129, 114, 218, 0) 100%
-      ),
-      linear-gradient(180deg, #58ccdc 0%, rgba(88, 204, 220, 0) 100%),
-      linear-gradient(81.23deg, #ff557e 21.4%, rgba(255, 85, 85, 0) 84.87%),
-      #f2f5fa;
+   background: radial-gradient(110.88% 79.69% at 47.77% 151.82%, #ffec45 0%, rgba(255, 236, 69, 0.3) 54.92%, rgba(255, 236, 69, 0) 96.11%), radial-gradient(50% 68.23% at 98.21% 96.61%, #41d1b7 0%, rgba(65, 209, 183, 0.35) 49.27%, rgba(65, 209, 183, 0) 100%), radial-gradient(83.71% 75.52% at -10.04% 2.86%, #8263db 0%, rgba(129, 114, 218, 0.26) 56.87%, rgba(129, 114, 218, 0) 100%), linear-gradient(180deg, #58ccdc 0%, rgba(88, 204, 220, 0) 100%), linear-gradient(81.23deg, #ff557e 21.4%, rgba(255, 85, 85, 0) 84.87%), #f2f5fa;
    background-blend-mode: normal, normal, darken, normal, normal, normal;
    filter: blur(43px);
 `;

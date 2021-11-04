@@ -4,15 +4,7 @@ import ExpressLogo from '../Logos/Express';
 
 import { Headline } from '../../styles/general';
 import { TextInfo } from '../About/styles';
-import {
-   CheckIcon,
-   DetailsSection,
-   SvgSection,
-   TechContainer,
-   TechItem,
-   TechList,
-   TechListContainer
-} from './styles';
+import { CheckIcon, DetailsSection, SvgSection, TechContainer, TechItem, TechList, TechListContainer } from './styles';
 
 export const Backend = () => {
    return (
@@ -20,14 +12,24 @@ export const Backend = () => {
          <DetailsSection>
             <Headline> Back-end </Headline>
             <br />
-            <TextInfo> El desarrollo Backend es un área que cada vez más me interesa, esta son algunas de las tecnologías que manejo : </TextInfo>
+            <TextInfo> El desarrollo Backend es un área que cada vez me interesa más. Estas son algunas de las tecnologías que manejo : </TextInfo>
             <TechListContainer>
                <TechList>
-                  <TechItem><CheckIcon /> NodeJS </TechItem>
-                  <TechItem><CheckIcon /> MongoDB </TechItem>
-                  <TechItem><CheckIcon /> Express </TechItem>
-                  <TechItem><CheckIcon /> PHP </TechItem>
-                  <TechItem><CheckIcon /> MySQL </TechItem>
+                  <TechItem>
+                     <CheckIcon /> NodeJS{' '}
+                  </TechItem>
+                  <TechItem>
+                     <CheckIcon /> MongoDB{' '}
+                  </TechItem>
+                  <TechItem>
+                     <CheckIcon /> Express{' '}
+                  </TechItem>
+                  <TechItem>
+                     <CheckIcon /> PHP{' '}
+                  </TechItem>
+                  <TechItem>
+                     <CheckIcon /> MySQL{' '}
+                  </TechItem>
                </TechList>
             </TechListContainer>
          </DetailsSection>

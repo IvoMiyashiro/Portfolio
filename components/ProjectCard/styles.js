@@ -6,27 +6,15 @@ export const ProjectCardContainer = styled.div`
    display: flex;
    justify-content: space-between;
    flex-direction: column;
-   box-shadow:
-      0px 0px 2.2px rgba(0, 0, 0, 0.014),
-      0px 0px 5.3px rgba(0, 0, 0, 0.02),
-      0px 0px 10px rgba(0, 0, 0, 0.025),
-      0px 0px 17.9px rgba(0, 0, 0, 0.03),
-      0px 0px 33.4px rgba(0, 0, 0, 0.036),
-      0px 0px 80px rgba(0, 0, 0, 0.05);
+   box-shadow: 0px 0px 2.2px rgba(0, 0, 0, 0.014), 0px 0px 5.3px rgba(0, 0, 0, 0.02), 0px 0px 10px rgba(0, 0, 0, 0.025), 0px 0px 17.9px rgba(0, 0, 0, 0.03), 0px 0px 33.4px rgba(0, 0, 0, 0.036), 0px 0px 80px rgba(0, 0, 0, 0.05);
    border-radius: 8px;
    width: 100%;
-   transition: .3s ease-in-out;
+   transition: 0.3s ease-in-out;
    overflow: hidden;
 
    &:hover {
-      box-shadow:
-      0px 0px 2.2px rgba(0, 0, 0, 0.022),
-      0px 0px 5.3px rgba(0, 0, 0, 0.032),
-      0px 0px 10px rgba(0, 0, 0, 0.04),
-      0px 0px 17.9px rgba(0, 0, 0, 0.048),
-      0px 0px 33.4px rgba(0, 0, 0, 0.058),
-      0px 0px 80px rgba(0, 0, 0, 0.08);
-      transition: .3s ease-in-out;
+      box-shadow: 0px 0px 2.2px rgba(0, 0, 0, 0.022), 0px 0px 5.3px rgba(0, 0, 0, 0.032), 0px 0px 10px rgba(0, 0, 0, 0.04), 0px 0px 17.9px rgba(0, 0, 0, 0.048), 0px 0px 33.4px rgba(0, 0, 0, 0.058), 0px 0px 80px rgba(0, 0, 0, 0.08);
+      transition: 0.3s ease-in-out;
    }
 
    ${bps.desktop} {
@@ -36,12 +24,12 @@ export const ProjectCardContainer = styled.div`
 
 export const CardSection = styled.section`
    position: relative;
-   
+
    &:first-child {
       padding: 1em;
       order: 1;
 
-      ${bps.desktop}{
+      ${bps.desktop} {
          max-width: 60%;
          padding: 2em;
       }
@@ -51,11 +39,11 @@ export const CardSection = styled.section`
       border-radius: 4px;
       height: 175px;
       width: 100%;
-      margin-top: .35em;
       order: 0;
 
       ${bps.desktop} {
          height: 300px;
+         width: 400px;
          order: 1;
       }
    }
@@ -63,21 +51,22 @@ export const CardSection = styled.section`
 
 export const Legend = styled.legend`
    font-family: 'Fira Mono', sans-serif;
-   color: ${props => props.theme.highlight};
+   color: ${(props) => props.theme.highlight};
 `;
 
 export const Title = styled.h2`
    margin: 0;
-   margin-top: .25em;
+   margin-top: 0.25em;
 `;
 
 export const Description = styled.div`
    margin: 1em 0;
    line-height: 1.5em;
    text-align: justify;
-   font-size: .9rem;
+   font-size: 0.9rem;
 
    ${bps.desktop} {
+      height: 90px;
       font-size: 1rem;
    }
 `;
