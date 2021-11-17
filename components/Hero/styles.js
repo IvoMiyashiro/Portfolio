@@ -67,6 +67,11 @@ export const Quote = styled.legend`
    }
 `;
 
+export const Anchor = styled.a`
+  max-width: 275px;
+  height: 50px;
+`;
+
 export const Button = styled.button`
    width: 100%;
    max-width: 275px;

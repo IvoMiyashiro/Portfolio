@@ -18,4 +18,8 @@ export const ProjectsCardsContainer = styled.section`
    flex-wrap: wrap;
    gap: 3em;
    margin-top: 3em;
+
+   ${bps.desktop} {
+     gap: 6em;
+   }
 `;

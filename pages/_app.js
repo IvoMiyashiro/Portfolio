@@ -7,13 +7,13 @@ import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }) {
 
-   const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState('light');
 
-   return (
-      <ThemeProvider theme={theme === 'light' ? lighTheme : darkTheme}>
-         <Component {...pageProps} />
-      </ThemeProvider>
-   );
+  return (
+    <ThemeProvider theme={theme === 'light' ? lighTheme : darkTheme}>
+      <Component {...pageProps} />
+    </ThemeProvider>
+  );
 }
 
 export default MyApp;
