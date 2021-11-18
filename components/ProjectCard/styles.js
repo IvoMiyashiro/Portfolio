@@ -111,6 +111,7 @@ export const Title = styled.h1`
 
 export const CardInfo = styled.div`
 
+  line-height: 1.5em;
 
   ${bps.desktop} {
     box-shadow:

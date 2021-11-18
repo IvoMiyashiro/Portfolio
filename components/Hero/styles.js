@@ -28,7 +28,7 @@ export const HeroContainer = styled.div`
 
 export const MainTitle = styled.h1`
    margin: 0;
-   font-size: 2.25rem;
+   font-size: 2.5rem;
    font-family: 'Inter', sans-serif;
    letter-spacing: -0.5px;
 
@@ -52,19 +52,16 @@ export const CoolUnderline = styled.div`
 
    ${bps.desktop} {
       bottom: 3px;
+      height: 10px;
    }
 `;
 
 export const Quote = styled.legend`
-   font-size: 0.9rem;
    max-width: 600px;
    line-height: 1.5em;
    text-align: justify;
    text-justify: inter-cluster;
-
-   ${bps.desktop} {
-      font-size: 1rem;
-   }
+   font-size: 1rem;
 `;
 
 export const Anchor = styled.a`

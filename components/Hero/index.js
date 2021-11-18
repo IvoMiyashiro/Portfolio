@@ -30,7 +30,7 @@ export const Hero = () => {
             <MainTitle> Ivan Miyashiro </MainTitle>
             <MainTitle>
               <UnderlineWord>
-                Frontend Dev.
+                Web Developer.
                 {underlineAnimation && <CoolUnderline className="animate__animated animate__zoomIn"></CoolUnderline>}
               </UnderlineWord>
             </MainTitle>

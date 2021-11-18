@@ -12,6 +12,6 @@ export const TechCard = ({ title, logo: Logo }) => {
       <TitleContainer>
         {title}
       </TitleContainer>
-    </TechCardContainer>
+    </TechCardContainer >
   );
 };

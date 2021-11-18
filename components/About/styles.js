@@ -24,6 +24,7 @@ export const MainInfoSection = styled.section`
    align-items: center;
    gap: 3em;
    margin-top: 1.5em;
+   flex-wrap: wrap;
 
    ${bps.desktop} {
       flex-direction: row;
@@ -36,16 +37,48 @@ export const ImageContainer = styled.div`
    justify-content: center;
    align-items: center;
    position: relative;
-   border-radius: 50%;
-   overflow: hidden;
+   border-radius: 8px;
    width: 250px;
    height: 250px;
+   margin-top: 1em;
 
    ${bps.desktop} {
       width: 300px;
       height: 300px;
       order: 1;
+      margin-top: 0;
    }
+`;
+
+export const Image = styled.img`
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  z-index: 10;
+  border-radius: 6px;
+
+  ${bps.desktop} {
+    width: 300px;
+    height: 300px;
+  }
+`;
+
+export const ImageBackground = styled.div`
+  position: absolute;
+  border: 4px solid ${props => props.theme.highlight};
+  width: 250px;
+  height: 250px;
+  left: 12px;
+  top: 12px;
+  z-index: 0;
+  border-radius: 6px;
+
+  ${bps.desktop} {
+    left: 16px;
+    top: 16px;
+    width: 300px;
+    height: 300px;
+  }
 `;
 
 export const GradientCircle = styled.div`
@@ -65,6 +98,8 @@ export const TextInfo = styled.section`
    text-justify: inter-cluster;
    max-width: 600px;
    margin: 0;
+   margin-top: 1em;
+   font-size: 1rem;
 
    ${bps.desktop} {
       order: 0;
@@ -78,4 +113,35 @@ export const FirstP = styled.p`
 
 export const SecondP = styled.p`
    margin: 1em 0;
+`;
+
+export const SoftSkillsContainer = styled.div`
+  display: flex;
+`;
+
+export const SoftSkills = styled.ul`
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1em;
+`;
+
+export const Skill = styled.li`
+  font-size: .8rem;
+  padding: .25em .75em;
+  background: #f0f0f0;
+  color: black;
+  font-family: 'Fira Mono', monospace;
+  border-radius: 4px;
+
+  &:first-child {
+    font-size: 1rem;
+    font-weight: 600;
+    background: transparent;
+    color: ${props => props.theme.highlight};
+    padding: 0;
+  }
 `;
