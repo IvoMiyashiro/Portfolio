@@ -57,7 +57,7 @@ export const Technologies = () => {
   };
 
   return (
-    <TechnologiesContainer id="technologies">
+    <TechnologiesContainer id="tech">
       <TitleContainer>
         <SectionTitle> Tecnologías <HighlightText>.</HighlightText> </SectionTitle>
         <ButtonsContainer>

@@ -35,9 +35,9 @@ export const Hero = () => {
               </UnderlineWord>
             </MainTitle>
           </div>
-          <Quote>Hace un año comence mi aventura dentro del mundo del desarrollo web y hoy me especializo en tecnologías como ReactJS.</Quote>
+          <Quote>Hace un tiempo comence mi aventura dentro del mundo del desarrollo web y hoy me especializo en tecnologías como React.js y Node.js</Quote>
 
-          <Anchor href="https://drive.google.com/file/d/195usof_gO-haHIx7paWvgoC5CogevTJv/view?usp=sharing" target="_blank" rel="noreferrer">
+          <Anchor href="https://drive.google.com/file/d/1IkrSAWHsUwFG2RnZEqP0sP2VEj6Omuz_/view?usp=sharing" target="_blank" rel="noreferrer">
             <Button>Descargar CV</Button>
           </Anchor>
         </HeroContainer>

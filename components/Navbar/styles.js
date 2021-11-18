@@ -4,9 +4,21 @@ import { bps } from '../../styles/breakpoints';
 
 export const NavContainer = styled.header`
    position: sticky;
-   -webkit-backdrop-filter: blur(5px);
-   backdrop-filter: blur(5px);
-   top: 0;
+   -webkit-backdrop-filter: blur(14px) saturate(180%);
+   backdrop-filter: blur(14px) saturate(180%);
+   background-color: rgba(255, 255, 255, 0.75);
+   border-radius: 12px;
+   box-shadow:
+    0px 0px 2.2px rgba(0, 0, 0, 0.008),
+    0px 0px 5.3px rgba(0, 0, 0, 0.012),
+    0px 0px 10px rgba(0, 0, 0, 0.015),
+    0px 0px 17.9px rgba(0, 0, 0, 0.018),
+    0px 0px 33.4px rgba(0, 0, 0, 0.022),
+    0px 0px 80px rgba(0, 0, 0, 0.03);
+   top: 8px;
+   width: 95%;
+   max-width: 1640px;
+   margin: 0 auto;
    height: 80px;
    margin-top: -80px;
    z-index: 10;
@@ -29,6 +41,7 @@ export const LogoSection = styled(Link)`
    height: 80px;
    cursor: pointer;
    transition: transform 0.3s ease-in-out;
+   z-index: 10;
 
    &:hover {
       transform: scale(1.05);
@@ -48,25 +61,46 @@ export const NavlinksSection = styled.section`
 
 export const NavlinksList = styled.ul`
    display: flex;
-   gap: 1.65em;
+   gap: 2.25em;
+`;
+
+export const Dot = styled.span`
+  opacity: 0;
+  color: ${props => props.theme.highlight};
+  font-size: 3rem;
+
+  ${bps.desktop} {
+    font-size: 2.25rem;
+  }
 `;
 
 export const Navlink = styled(Link)`
    cursor: pointer;
-   font-size: 1rem;
+   font-size: 1.1rem;
    font-family: 'Fira Mono', sans-serif;
    font-weight: 500;
-   padding: 0.5em 0.65em;
    border-radius: 4px;
    color: ${(props) => props.theme.primaryText};
-
-   &:hover {
-      background: ${(props) => props.theme.background};
-   }
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   line-height: .5em;
+  position: relative; 
 
    &.active {
-      background: ${(props) => props.theme.third};
-   }
+      ${Dot} {
+      position: absolute;
+      top: 8px;
+      opacity: 1;
+      }
+    }
+
+    &:last-child {
+      background: black;
+      padding: .65em 1em;
+      margin-top: -12px;
+      color: white;
+    }
 `;
 
 export const BarsButton = styled.div`
@@ -99,7 +133,7 @@ const barsAnimation = `
 `;
 
 const mobileMenu = `
-   height: 100vh;
+   height: 98vh;
    transition: height .2s ease-in-out;
 `;
 
@@ -135,6 +169,14 @@ export const Bars = styled.div`
 
 export const MobileMenu = styled.menu`
    background: ${(props) => props.theme.mobileMenuBackground};
+   border-radius: 12px;
+   box-shadow:
+    0px 0px 2.2px rgba(0, 0, 0, 0.008),
+    0px 0px 5.3px rgba(0, 0, 0, 0.012),
+    0px 0px 10px rgba(0, 0, 0, 0.015),
+    0px 0px 17.9px rgba(0, 0, 0, 0.018),
+    0px 0px 33.4px rgba(0, 0, 0, 0.022),
+    0px 0px 80px rgba(0, 0, 0, 0.03); 
    position: fixed;
    width: 100%;
    height: 0px;
@@ -154,8 +196,32 @@ export const MobileMenu = styled.menu`
 
 export const MobileNavLinksList = styled.ul`
    display: flex;
-   gap: 2em;
+   gap: .5em;
    flex-direction: column;
-   align-items: center;
    margin-right: 3.5em;
+   text-align: left;
+   width: 100%;
+`;
+
+
+export const NavlinkMobile = styled(Link)`
+   cursor: pointer;
+   font-size: 1.5rem;
+   font-family: 'Fira Mono', sans-serif;
+   font-weight: 500;
+   border-radius: 4px;
+   color: ${(props) => props.theme.primaryText};
+   font-weight: 600;
+
+   &.active {
+
+     ${Dot} {
+      opacity: 1;
+     }
+   }
+`;
+
+export const LinkContainer = styled.div`
+  height: 80px;
+  width: 100%;
 `;

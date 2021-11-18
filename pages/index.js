@@ -6,6 +6,7 @@ import { SocialMediaColumn } from '../components/SocialMediaColumn';
 // import { LenguagesColumn } from '../components/LenguagesColumn';
 import { Hero } from '../components/Hero';
 import { About } from '../components/About';
+import { Technologies } from '../components/Technologies';
 import { Projects } from '../components/Projects';
 import { Footer } from '../components/Footer';
 import {
@@ -18,11 +19,13 @@ import { Loader } from '../components/Loader';
 
 export default function Home() {
   const aboutRef = useRef(null);
+  const techRef = useRef(null);
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
 
   const [loader, setLoader] = useState(false);
   const [showAbout, setShowAbout] = useState(false);
+  const [showTech, setShowTech] = useState(false);
   const [showProjects, setShowProjects] = useState(false);
   const [showContact, setShowContact] = useState(false);
 
@@ -39,6 +42,8 @@ export default function Home() {
     const handleShowSection = () => {
       const aboutSectionPosition =
         aboutRef.current.getBoundingClientRect().top;
+      const techSectionPosition =
+        aboutRef.current.getBoundingClientRect().top;
       const projectsSectionPosition =
         projectsRef.current.getBoundingClientRect().top;
       const contactSectionPosition =
@@ -47,6 +52,10 @@ export default function Home() {
 
       if (aboutSectionPosition + 250 < windowPosition) {
         setShowAbout(true);
+      }
+
+      if (techSectionPosition + 250 < windowPosition) {
+        setShowTech(true);
       }
 
       if (projectsSectionPosition + 250 < windowPosition) {
@@ -98,6 +107,9 @@ export default function Home() {
           <Hero />
           <div className={`hidden ${showAbout && 'show'}`} ref={aboutRef}>
             <About />
+          </div>
+          <div className={`hidden ${showTech && 'show'}`} ref={techRef}>
+            <Technologies />
           </div>
           <div
             className={`hidden ${showProjects && 'show'}`}

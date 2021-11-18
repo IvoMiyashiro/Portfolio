@@ -40,6 +40,8 @@ export const MainTitle = styled.h1`
 export const UnderlineWord = styled.div`
    display: inline-block;
    position: relative;
+   z-index: 1;
+   top: 0;
 `;
 
 export const CoolUnderline = styled.div`
@@ -49,6 +51,7 @@ export const CoolUnderline = styled.div`
    width: 100%;
    background: linear-gradient(90deg, #ff9897 0%, #f650a0 100%);
    transform: rotate(-0.5deg);
+   z-index: -1;
 
    ${bps.desktop} {
       bottom: 3px;

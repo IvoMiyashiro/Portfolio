@@ -6,6 +6,7 @@ export const AboutSection = styled.div`
    position: relative;
    z-index: 0;
    transition: 0.3s ease-in-out;
+   padding-top: 3em;
 `;
 
 export const AboutContainer = styled.div`

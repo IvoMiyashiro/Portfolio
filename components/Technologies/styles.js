@@ -60,6 +60,7 @@ export const CoolUnderline = styled.div`
    background: linear-gradient(90deg, #ff9897 0%, #f650a0 100%);
    transform: rotate(-0.5deg);
    opacity: .8;
+   z-index: 0;
 
    ${bps.desktop} {
       bottom: 3px;
