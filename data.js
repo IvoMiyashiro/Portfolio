@@ -17,7 +17,6 @@ import VsCode from './components/Logos/VsCode';
 import Git from './components/Logos/Git';
 import Github from './components/Logos/Github';
 import Firebase from './components/Logos/Firebase';
-import Postman from './components/Logos/Postman';
 import PostgresqlIcon from './components/Logos/Postgresql';
 
 // Technologies ----------------------------->
