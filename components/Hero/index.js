@@ -37,7 +37,7 @@ export const Hero = () => {
           </div>
           <Quote>Hace un tiempo comencé mi aventura dentro del mundo del desarrollo web y hoy me especializo en tecnologías como React.js y Next.js</Quote>
 
-          <Anchor href="https://drive.google.com/file/d/1IkrSAWHsUwFG2RnZEqP0sP2VEj6Omuz_/view?usp=sharing" target="_blank" rel="noreferrer">
+          <Anchor href="https://drive.google.com/file/d/1l750Nybn02r6vWrsgNotT_40M1otiwaT/view?usp=sharing" target="_blank" rel="noreferrer">
             <Button>Descargar CV</Button>
           </Anchor>
         </HeroContainer>
