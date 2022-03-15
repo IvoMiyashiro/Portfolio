@@ -32,6 +32,8 @@ export const ProjectCard = ({ projects, position }) => {
               alt={alt}
               layout="fill"
               objectFit="cover"
+              placeholder="blur"
+              blurDataURL={img}
             />
           </ImageContainer>
         </Link>

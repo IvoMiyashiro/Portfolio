@@ -27,7 +27,7 @@ export const About = () => {
             <ImageBackground></ImageBackground>
           </ImageContainer>
           <TextInfo>
-            <FirstP>Mi nombre es Ivan, nací en 1999 y vivo en Buenos Aires, Argentina. Soy estudiante de Ingeniería Informática en la Universidad Católica Argentina de Buenos Aires. Hace un tiempo comencé a tener interés dentro del mundo del desarrollo web, tanto Frontend como Backend. Desde ese momento me dediqué a estudiar sin descansar diferentes tecnologías que se utilizan en el mundo del desarrollo para convertirme en un mejor programador.</FirstP>
+            <FirstP>Mi nombre es Ivan, nací en 1999 y vivo en Buenos Aires, Argentina. Soy estudiante de Lic. en Gestión de Tecnología de la Información. Hace un tiempo comencé a tener interés dentro del mundo del desarrollo web, tanto Frontend como Backend. Desde ese momento me dediqué a estudiar sin descansar diferentes tecnologías que se utilizan en el mundo del desarrollo para convertirme en un mejor programador.</FirstP>
             <SecondP>Me considero una persona que busca tener siempre un código limpio y ordenado para facilitar la escabilidad de las aplicaciones y me gusta aprender cosas nuevas para superarme cada día!</SecondP>
             <SoftSkillsContainer>
               <SoftSkills>

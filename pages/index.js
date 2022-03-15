@@ -3,7 +3,6 @@ import Head from 'next/head';
 import { Contact } from '../components/Contact';
 import { Navbar } from '../components/Navbar';
 import { SocialMediaColumn } from '../components/SocialMediaColumn';
-// import { LenguagesColumn } from '../components/LenguagesColumn';
 import { Hero } from '../components/Hero';
 import { About } from '../components/About';
 import { Technologies } from '../components/Technologies';

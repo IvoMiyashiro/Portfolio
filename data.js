@@ -18,6 +18,7 @@ import Git from './components/Logos/Git';
 import Github from './components/Logos/Github';
 import Firebase from './components/Logos/Firebase';
 import Postman from './components/Logos/Postman';
+import PostgresqlIcon from './components/Logos/Postgresql';
 
 // Technologies ----------------------------->
 
@@ -80,6 +81,10 @@ export const techArr = [{
   logo: MySql
 },
 {
+  tech: 'PostgreSQL',
+  logo: PostgresqlIcon
+},
+{
   tech: 'Python',
   logo: Python
 },
@@ -98,10 +103,6 @@ export const techArr = [{
 {
   tech: 'Firebase',
   logo: Firebase
-},
-{
-  tech: 'Postman',
-  logo: Postman
 }
 ];
 
@@ -167,6 +168,14 @@ export const backendTechArr = [{
   tech: 'MySQL',
   logo: MySql
 },
+{
+  tech: 'PostgreSQL',
+  logo: PostgresqlIcon
+},
+{
+  tech: 'Firebase',
+  logo: Firebase
+}
 ];
 
 // Others
@@ -187,12 +196,4 @@ export const othersTechArr = [{
   tech: 'Github',
   logo: Github
 },
-{
-  tech: 'Firebase',
-  logo: Firebase
-},
-{
-  tech: 'Postman',
-  logo: Postman
-}
 ];
